@@ -1,0 +1,141 @@
+    1  docker stop centos7
+    2  ls /
+    3  ls /usr
+    4  pwd
+    5  cd /root
+    6  pwd
+    7  cd usr
+    8  ls -a
+    9  ls 
+   10  cd /usr
+   11  pwd
+   12  cd /home
+   13  mkdir test1
+   14  ls
+   15  cd /home
+   16  mkdir test2/test3
+   17  mkdir -p test2/test3
+   18  ls test2
+   19  touch test1/index.php
+   20  ls test1
+   21  cd /home/test1 && ls
+   22  cd /home/test1
+   23  cp index.php copy.php
+   24  ls
+   25  cd /home
+   26  cp -r test1 test4
+   27  ls
+   28  ls test4
+   29  cd /home
+   30  mv test2/test3 test3
+   31  ls
+   32  mv test4 test1_copy
+   33  ls
+   34  cd /home
+   35  ls test1
+   36  rm test1/copy.php
+   37  ls test1
+   38  rm -r test3
+   39  ls
+   40  rm test1_copy/*.php
+   41  ls
+   42  rm test1_copy/*.php
+   43  ls test1_copy
+   44  cd /home
+   45  echo '# Hello World' > README.md
+   46  ls
+   47  cat README.md
+   48  echo '# Server Lesson' > README.md
+   49  cat README.md
+   50  echo 'Linux Practice' >> README.md
+   51  echo '-----------------' >> README.md
+   52  cat README.md
+   53  vi README.md
+   54  cat README.md
+   55  vi README.md
+   56  cat README.md
+   57  cd /root
+   58  mkdir server_lesson && cd server_lesson
+   59  yum update -y && yum -y install git
+   60  git version
+   61  git init
+   62  ls -l
+   63  ls -a
+   64  touch first.txt
+   65  ls
+   66  git status
+   67  ls
+   68  git add .
+   69  git commit -m 'first commit'
+   70  git status
+   71  git config --global user.email "kakki.101110.k.k@gmail.com"
+   72  git commit -m 'first commit'
+   73  git log
+   74  mkdir linux_practice1 && cd linux_practice1
+   75  git status
+   76  git add .
+   77  git status
+   78  git commit -m 'add: linux_practice1を追加'
+   79  git log
+   80  mkdir public && cd public
+   81  vi index.php
+   82  ls
+   83  ls -a
+   84  vi index.php
+   85  ls
+   86  git status
+   87  git add .
+   88  git commit -m 'add: index.phpを追加'
+   89  cp index.php index_bk.php
+   90  ls
+   91  git add .
+   92  git commit -m 'add: index.phpのコピーのindex_bk.phpを生成'
+   93  git log
+   94  cd ..
+   95  cp -r public tmp
+   96  ls
+   97  git status
+   98  git add .
+   99  git commit -m 'add: publicディレクトリのコピー、tmpを生成'
+  100  rm tmp/index_bk.php
+  101  cd tmp
+  102  ls
+  103  cd ..
+  104  git add .
+  105  git status
+  106  git commit -m 'refactor!: tmp配下のindex_bk.phpの削除'
+  107  git rm tmp/index_bk.php
+  108  git status
+  109  git commit -m 'refactor!: tmp配下のindex_bk.phpの削除'
+  110  git log
+  111  cd ../..
+  112  ls
+  113  git server_lesson
+  114  cd server_lesson
+  115  ls
+  116  vi README.md
+  117  cat README.md
+  118  mkdir linux_practice2 && cd linux_practice2
+  119  mkdir documents && cd documents
+  120  touch gizumo{01..50}.md
+  121  ls
+  122  cd ..
+  123  mkdir trash
+  124  mv documents/gizumo{20..40}.md trash
+  125  ls
+  126  cd trash
+  127  ls
+  128  cd ..
+  129  cd documents
+  130  ls
+  131  cd ..
+  132  touch .gitignore
+  133  ls
+  134  ls -a
+  135  vi .gitignore
+  136  cat .gitignore
+  137  echo history 300 > exec_command.log
+  138  ls
+  139  cat exec_command.log
+  140  history 300
+  141  history 300 > exec_command.log
